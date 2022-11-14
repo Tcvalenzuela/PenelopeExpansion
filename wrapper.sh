@@ -6,7 +6,7 @@ rm -rf $CFG
 
 for html in $DATA/*.html;do
         SID=$(basename $html | sed 's/.fa*.align.divsum.html//')
-        python $JATGBASE/1.preliminary/2.masking/scripts/repeatMaskerHtml2R.py --ht $html --O ${html}_R.tsv
+        python ./repeatMaskerHtml2R.py --ht $html --O ${html}_R.tsv
         echo -e "${SID}\t${html}_R.tsv" >> $CFG
 done
 
